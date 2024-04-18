@@ -1,9 +1,13 @@
-void setup() {
-  // put your setup code here, to run once:
-
+int motorPin = 12;
+void setup()
+{
+  pinMode(motorPin, OUTPUT);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-
+void loop()
+{
+  digitalWrite(motorPin, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(motorPin, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
 }
