@@ -1,13 +1,31 @@
-int motorPin = 12;
+// C++ code
+//
+int backwardPin = 12;
+int forwardPin = 11;
+
 void setup()
 {
-  pinMode(motorPin, OUTPUT);
+  pinMode(forwardPin, OUTPUT);
+  pinMode(backwardPin, OUTPUT);
 }
 
 void loop()
 {
-  digitalWrite(motorPin, HIGH);
-  delay(1000); // Wait for 1000 millisecond(s)
-  digitalWrite(motorPin, LOW);
-  delay(1000); // Wait for 1000 millisecond(s)
+
+  
+  //Forward
+ digitalWrite(forwardPin,LOW);
+  digitalWrite(backwardPin,HIGH);
+  delay(1000);
+  
+  //stop
+  digitalWrite(forwardPin, LOW);
+  digitalWrite(backwardPin, LOW);
+  delay(1000);
+  
+  
+  //backward
+  digitalWrite(forwardPin,HIGH);
+  digitalWrite(backwardPin,LOW);
+  delay(1000);
 }
